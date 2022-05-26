@@ -26,16 +26,6 @@ class VideoCap(Tk.Frame, threading.Thread):
             # 행동인식->행동분류 후에 밑에 함수를 반드시 실행시키셈
             # self.evt.set()
 
-            '''
-            어떻게 동작한 후
-            result = ???
-            if(result == "ok"):
-                self.evt.set()
-            elif result == "not good":
-                pass
-            elif result == "bad":
-                pass
-            '''
             imgtk = PIL.ImageTk.PhotoImage(image = PIL.Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)))
             self.label.configure(image=imgtk)
             self.label.image = imgtk
